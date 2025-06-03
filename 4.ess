@@ -1,0 +1,7 @@
+start 
+new p number
+set p 3 
+new i number
+set i 14159265
+log string p >> "." >> i
+finish
