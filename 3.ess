@@ -1,0 +1,22 @@
+start
+new a number
+set a 2
+new b number
+set b 2
+
+
+new product number
+set product 0
+new i number
+set i 1
+
+loop multiply (a > i)
+    set product product + b
+    set i i + 1
+end multiply
+
+
+new x number
+set x a + product
+log number x
+finish
