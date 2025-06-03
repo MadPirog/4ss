@@ -1,0 +1,49 @@
+start
+new x number
+set x 3   
+new h number
+set h 1    
+
+
+new fxh number
+set fxh 0
+new i number
+set i 0
+new xh number
+set xh x+h
+
+loop calc_fxh (xh > i)
+    set fxh fxh + x + h
+    set i i + 1
+end calc_fxh
+
+
+new fx number
+set fx 0
+new j number
+set j 0
+
+loop calc_fx (x > j)
+    set fx fx + x
+    set j j + 1
+end calc_fx
+
+
+new diff number
+set diff fxh - fx
+
+
+new derivative number
+set derivative 0
+new temp number
+set temp diff
+new t number
+set t h-1
+
+loop division (temp > t)
+    set derivative derivative + 1
+    set temp temp - h
+end division
+
+log string "Производная функции x^2 в точке " >> x >> " равна " >> derivative
+finish
